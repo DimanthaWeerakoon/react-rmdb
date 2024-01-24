@@ -28,10 +28,11 @@ const Home = () => {
           text={state.results[0].overview}
         />
       ) : null}
-      <Grid header="Popular movies" />
-      {state.results.map((movie) => (
-        <div>{movie.title}</div>
-      ))}
+      <Grid header="Popular movies">
+        {state.results.map((movie) => (
+          <div key={movie.id}>{movie.title}</div>
+        ))}
+      </Grid>
     </>
   );
 };
