@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import API from "../API";
 
 const initialState = {
-  page: 0,
+  page: 10,
   results: [],
   total_pages: 0,
   total_results: 0,
@@ -34,10 +34,11 @@ export const useHomeFetch = () => {
 
     setLoading(false);
   };
-
+  //Initial and search
   useEffect(() => {
-    fetchMovies(1);
-  }, []);
+    setState(initialState);
+    fetchMovies(1, searchTerm);
+  }, [searchTerm]);
 
-  return { state, loading, error, setSearchTerm };
+  return { state, loading, error, searchTerm, setSearchTerm };
 };
