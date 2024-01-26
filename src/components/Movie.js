@@ -9,6 +9,7 @@ import { IMAGE_BASE_URL, POSTER_SIZE } from "../config";
 import BreadCrumb from "./BreadCrumb";
 import Grid from "./Grid";
 import Spinner from "./Spinner";
+import MovieInfo from "./MovieInfo";
 
 // Hook
 import { useMovieFetch } from "../hooks/useMovieFetch";
@@ -26,6 +27,7 @@ const Movie = () => {
   return (
     <>
       <BreadCrumb moiveTitle={movie.title} />
+      <MovieInfo movie={movie} />
     </>
   );
 };
