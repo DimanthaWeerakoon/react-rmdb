@@ -1,4 +1,5 @@
 import React from "react";
+import PropType from "prop-type";
 
 //Styles
 import { Wrapper, Content, Text } from "./HeroImage.styles";
@@ -13,5 +14,10 @@ const HeroImage = ({ image, title, text }) => (
     </Content>
   </Wrapper>
 );
+HeroImage.propTypes = {
+  image: PropType.string,
+  title: PropType.string,
+  text: PropType.string,
+};
 
 export default HeroImage;
