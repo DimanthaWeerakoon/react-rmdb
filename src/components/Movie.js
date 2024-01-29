@@ -53,8 +53,4 @@ const Movie = () => {
   );
 };
 
-BreadCrumb.propTypes = {
-  moiveTitle: PropTypes.string,
-};
-
 export default Movie;
