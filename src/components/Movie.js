@@ -1,5 +1,5 @@
 import React from "react";
-
+import PropTypes from "prop-types";
 import { useParams } from "react-router-dom";
 
 //Config
@@ -51,6 +51,10 @@ const Movie = () => {
       </Grid>
     </>
   );
+};
+
+BreadCrumb.propTypes = {
+  moiveTitle: PropTypes.string,
 };
 
 export default Movie;
