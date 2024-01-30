@@ -1,12 +1,12 @@
 import React from "react";
-import PropType from "prop-type";
+import PropTypes from "prop-types";
 
 import { Link } from "react-router-dom";
 
 // Styles
 import { Wrapper, Content } from "./BreadCrumb.styles";
 
-const BradCrumb = ({ moiveTitle }) => (
+const BreadCrumb = ({ moiveTitle }) => (
   <Wrapper>
     <Content>
       <Link to="/">
@@ -22,4 +22,4 @@ BreadCrumb.propTypes = {
   moiveTitle: PropTypes.string,
 };
 
-export default BradCrumb;
+export default BreadCrumb;
