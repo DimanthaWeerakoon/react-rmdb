@@ -14,7 +14,7 @@ export const convertMoney = (money) => {
   return formatter.format(money);
 };
 
-export const isPersistent = (stateName) => {
+export const isPersistentState = (stateName) => {
   const sessionState = sessionStorage.getItem(stateName);
   return sessionState && JSON.parse(sessionState);
 };
