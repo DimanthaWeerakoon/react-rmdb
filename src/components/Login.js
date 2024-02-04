@@ -10,25 +10,35 @@ import { Wrapper } from "./Login.styles";
 import { Context } from "../context";
 
 const Login = () => {
-  const [username, setUserName] = useState("");
+  const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState(false);
 
+  const [user, setUser] = useState(Context);
+
+  const navigate = useNavigate();
+
   const handleSubmit = () => {};
-  const handleInput = (e) => {};
+  const handleInput = (e) => {
+    const name = e.currentTarget.name;
+    const value = e.currentTarget.value;
+
+    if (name === "username") setUsername(value);
+    if (name === "password") setPassword(value);
+  };
   return (
     <Wrapper>
       <label>Username</label>
       <input
         type="text"
-        value="state value"
+        value={username}
         name="username"
         onChange={handleInput}
       />
       <input
         type="password"
         name="password"
-        value="state value"
+        value={password}
         onChange={handleInput}
       />
       <Button text="Login" callBack={handleSubmit} />
