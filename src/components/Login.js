@@ -49,8 +49,8 @@ const Login = () => {
       <label>Username</label>
       <input
         type="text"
-        value={username}
         name="username"
+        value={username}
         onChange={handleInput}
       />
       <input
