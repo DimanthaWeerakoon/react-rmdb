@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import API from "../API";
 //Components
@@ -29,6 +29,7 @@ const Login = () => {
       );
 
       console.log(sessionId);
+      console.log(_user);
       setUser({ sessionId: sessionId.session_id, username });
 
       navigate("/");
